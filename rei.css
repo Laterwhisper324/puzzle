@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    margin: 0;
+    min-height: 100vh;
+}
+
+#container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;       /* uma coluna */
+    grid-template-rows: auto auto;    /* uma linha para cada h1 */
+    gap: 20px;                        /* espaço entre os elementos */
+    justify-items: center;            /* centraliza na horizontal */
+    align-content: center;            /* centraliza o conjunto na vertical */
+}
+
+#container h1 {
+    font-size: 100px;
+    color: white;
+    font-family: "Redaction 70", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+#container a {
+    font-size: 100px;
+    color: yellow;
+    font-family: "Redaction 70", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+#salaS {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 999;
+}
+

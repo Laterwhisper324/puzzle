@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>telefone</title>
+    <link rel="stylesheet" href="telefone.css">
+</head>
+<body>
+    <img id="telefone" src="telefone.png" alt="Telefone">
+    <audio id="som-telefone" src="magiaz-telefone-antigo-442189.mp3" preload="auto"></audio>
+
+    <script src="protect.js"></script>
+    <script>
+        const telefone = document.getElementById('telefone');
+        const som = document.getElementById('som-telefone');
+
+        telefone.addEventListener('click', () => {
+            som.currentTime = 0;
+            som.play();
+        });
+    </script>
+</body>
+</html>
