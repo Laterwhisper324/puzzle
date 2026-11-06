@@ -8,8 +8,8 @@ async function hash(str) {
 }
 
 // Hashes criptografados das palavras-chave
-const _k1 = "e75347ef52f677d59b319a9b1d3d3ab13754bd70edd8d0ffcae6741e2f4c72a8"; // oceiros
-const _k2 = "0877c1dd3621b1ff6cace1d409c654b03e48b5e956778b985c49b5a38124af81"; // donzela
+const _k1 = "e75347ef52f677d59b319a9b1d3d3ab13754bd70edd8d0ffcae6741e2f4c72a8"; 
+const _k2 = "0877c1dd3621b1ff6cace1d409c654b03e48b5e956778b985c49b5a38124af81"; 
 
 // Monitora o que o usuário digita em tempo real:
 input.addEventListener('input', async function() {
