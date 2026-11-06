@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/rei.html",
+      "destination": "/sala1.html",
       "permanent": false
     }
   ]
