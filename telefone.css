@@ -6,6 +6,15 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    font-family: "Redaction 70", sans-serif;
+}
+
+.telefone-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
 }
 
 #telefone {
@@ -24,4 +33,47 @@ body {
 
 #telefone:active {
     transform: scale(0.95);
+}
+
+#container-input {
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+#codigo {
+    font-size: 28px;
+    font-family: "Redaction 70", sans-serif;
+    padding: 12px 20px;
+    width: 220px;
+    max-width: 80vw;
+    text-align: center;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 0px;
+    color: white;
+    background-color: black;
+    letter-spacing: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#codigo:focus {
+    border-color: #fff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

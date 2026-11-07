@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.backrooms-container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.45)), url('Backrooms_model-700x394.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.texto-central {
+    font-family: "Redaction 70", sans-serif;
+    font-size: 56px;
+    color: #ffffff;
+    text-transform: lowercase;
+    letter-spacing: 6px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 0, 0, 0.9), 0 0 8px rgba(255, 255, 255, 0.6);
+    user-select: none;
+    text-align: center;
+    padding: 20px;
+    animation: flicker 5s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        opacity: 0.35;
+    }
+}
+
+@media (max-width: 600px) {
+    .texto-central {
+        font-size: 34px;
+        letter-spacing: 3px;
+    }
+}

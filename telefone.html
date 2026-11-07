@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk:MORF@15&family=Redaction+70:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>telefone</title>
     <link rel="stylesheet" href="telefone.css">
 </head>
 <body>
-    <img id="telefone" src="telefone.png" alt="Telefone">
+    <div class="telefone-container">
+        <img id="telefone" src="telefone.png" alt="Telefone">
+        <div id="container-input" class="hidden">
+            <input type="text" id="codigo" placeholder="___" autocomplete="off" maxlength="10">
+        </div>
+    </div>
     <audio id="som-telefone" src="magiaz-telefone-antigo-442189.mp3" preload="auto"></audio>
 
     <script src="protect.js"></script>
     <script>
         const telefone = document.getElementById('telefone');
         const som = document.getElementById('som-telefone');
+        const containerInput = document.getElementById('container-input');
+        const inputCodigo = document.getElementById('codigo');
+
+        let cliques = 0;
 
         telefone.addEventListener('click', () => {
             som.currentTime = 0;
             som.play();
+
+            cliques++;
+            if (cliques >= 4) {
+                containerInput.classList.remove('hidden');
+                inputCodigo.focus();
+            }
+        });
+
+        function verificarCodigo() {
+            if (inputCodigo.value.trim() === '333') {
+                window.location.href = atob("YmFja3Jvb21zLmh0bWw=");
+            }
+        }
+
+        inputCodigo.addEventListener('input', verificarCodigo);
+        inputCodigo.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                verificarCodigo();
+            }
         });
     </script>
 </body>
